@@ -1,3 +1,7 @@
+const { JSDOM } = require('jsdom');
+const dom = new JSDOM('<!DOCTYPE html><html lang="en"><body></body></html>');
+global.document = dom.window.document;
+
 const chessBoard = document.getElementById("chessBoard");
 const n = 8;
 const board = Array.from({ length: n }, () => Array(n).fill(0));
