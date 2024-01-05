@@ -1,14 +1,14 @@
-# Problema Celor 8 Turnuri
+# The Eight Towers Problem
 
-Această aplicație rezolvă problema plasării a 8 turnuri pe o tablă de șah astfel încât să nu se atace reciproc. Implementarea este realizată în limbajul JavaScript, iar rezultatul este afișat într-o interfață web simplă.
+This application solves the Eight Towers Problem, which involves placing 8 towers on a chessboard in such a way that they do not attack each other. The implementation is done in JavaScript, and the result is displayed through a simple web interface. HTML and CSS are also utilized for the visual presentation, and the backtracking algorithm is employed to find a valid solution.
 ## How To Use It
 
-1. Deschide fișierul `index.html` într-un browser web.
+1. Open `index.html` in a web browser.
 
 ## Tehnical Details
 
-- Limbaj de programare: JavaScript
-- Cascading Style Sheets(Css) si HyperText Markup Language(Html)
+- Programming Language: JavaScript
+- Cascading Style Sheets(Css) and HyperText Markup Language(Html)
 
 ## Project Looks
 
