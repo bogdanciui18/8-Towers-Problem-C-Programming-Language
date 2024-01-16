@@ -1,9 +1,9 @@
 FROM gcc:latest
 
-WORKDIR /towersproblem
+WORKDIR /projectfinal
 
 COPY script.c
 
-RUN gcc -o towersproblem script.c
+RUN gcc -o projectfinal script.c
 
-CMD ["./towersproblem"]
+CMD ["./projectfinal"]
