@@ -1,20 +1,9 @@
-# Use an official Node.js runtime as a base image
-FROM node:14
+FROM gcc:latest
 
-# Set the working directory inside the container
-WORKDIR /usr/src/app
+WORKDIR /towersproblem
 
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+COPY scrirpt.c
 
-# Install app dependencies
-RUN npm install
+RUN gcc -o towersproblem script.c
 
-# Copy the rest of the application code
-COPY . .
-
-# Expose the port on which the app runs
-EXPOSE 3000
-
-# Define the command to run your app
-CMD ["node", "script.js"]
+CMD ["./script"]
