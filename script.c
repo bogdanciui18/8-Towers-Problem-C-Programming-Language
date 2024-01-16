@@ -40,45 +40,33 @@ void printBoard(int board[N][N], int solutionNumber) {
     return true;
 }
 
-    function solveTowersProblem(col) {
-        if (col >= n) {
-            return true;
-        }
-
-        for (let i = 0; i < n; i++) {
-            if (isValid(i, col)) {
-                board[i][col] = 1;
-
-                if (solveTowersProblem(col + 1)) {
-                    return true;
-                }
-
-                board[i][col] = 0;
-            }
-        }
-
-        return false;
+    bool solveNTowers(int board[N][N], int col, int *solutionCount) {
+    if (col == N) {
+        (*solutionCount)++;
+        printBoard(board, *solutionCount);
+        return true;
     }
 
-    solveTowersProblem(0);
-
-    for (let row = 0; row < n; row++) {
-        for (let col = 0; col < n; col++) {
-            const square = context.createElement("div");
-            square.classList.add("square", (row + col) % 2 === 0 ? "even" : "odd");
-
-            if (board[row][col] === 1) {
-                const towerSpan = context.createElement("span");
-                towerSpan.classList.add("tower");
-                towerSpan.textContent = "TOWER";
-                square.appendChild(towerSpan);
-            }
-
-            chessBoard.appendChild(square);
+    bool res = false;
+    for (int i = 0; i < N; i++) {
+        if (isValid(board, i, col)) {
+            board[i][col] = 1;
+            res = solveNTowers(board, col + 1, solutionCount) || res;
+            board[i][col] = 0;
         }
     }
+
+    return res;
 }
 
-// Exemplu de utilizare:
-initChessBoard(document);
+   int main() {
+    int board[N][N] = {0};
+    int solutionCount = 0;
+
+    solveNTowers(board, 0, &solutionCount);
+
+    printf("Numar total de solutii: %d\n", solutionCount);
+
+    return 0;
+}
 
