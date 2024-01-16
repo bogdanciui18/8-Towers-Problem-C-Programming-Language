@@ -2,8 +2,8 @@ FROM gcc:latest
 
 WORKDIR /towersproblem
 
-COPY scrirpt.c
+COPY script.c
 
 RUN gcc -o towersproblem script.c
 
-CMD ["./script"]
+CMD ["./towersproblem"]
