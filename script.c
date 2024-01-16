@@ -1,15 +1,29 @@
-const { JSDOM } = require('jsdom');
-const dom = new JSDOM('<!DOCTYPE html><html lang="en"><body></body></html>');
-global.document = dom.window.document;
+#include <stdio.h>
+#include <stdbool.h>
 
-function initChessBoard(context) {
-    const chessBoard = context.createElement("div");
-    chessBoard.id = "chessBoard";
-    context.body.appendChild(chessBoard);
+#define N 8
 
-    const n = 8;
-    const board = Array.from({ length: n }, () => Array(n).fill(0));
+void printBoard(int board[N][N], int solutionNumber) {
+    printf("Solutia %d:\n", solutionNumber);
+    printf("************************************\n");
+    
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if (board[i][j] == 1) {
+                printf("| T ");
+            } else {
+                printf("| 0 ");
+            }
+        }
+        printf("|\n");
+        for (int k = 0; k < N; k++) {
+            printf("----|");
+        }
+        printf("\n");
+    }
 
+    printf("\n");
+}
     function isValid(row, col) {
         for (let i = 0; i < n; i++) {
             if (board[row][i] === 1 || board[i][col] === 1) {
