@@ -1,9 +1,11 @@
-FROM gcc:latest
+FROM --platform=linux/amd64 alpine:latest
 
 WORKDIR /projectfinal
 
 COPY script.c
 
-RUN gcc -o projectfinal script.c
+RUN apk add --no-cache build-base
 
-CMD ["./projectfinal"]
+RUN gcc -o script script.c
+
+CMD ["./script"]
