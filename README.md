@@ -1,16 +1,18 @@
 # The Eight Towers Problem
 
-This application solves the Eight Towers Problem, which involves placing 8 towers on a chessboard in such a way that they do not attack each other. The implementation is done in JavaScript, and the result is displayed through a simple web interface. HTML and CSS are also utilized for the visual presentation, and the backtracking algorithm is employed to find a valid solution.
+This application solves the Eight Towers Problem, which involves placing 8 towers on a chessboard in such a way that they do not attack each other. The implementation is done in C Programming Language. If the program is executed in a compilation environment, the result is displayed in the console and the backtracking algorithm is employed to find every valid solution.
 
 ## How To Use It
 
-1. Open `index.html` in a web browser.
+1. Run the code in a compilation environment.
 
 ## Tehnical Details
 
-- Programming Language: JavaScript
-- Cascading Style Sheets(Css) and HyperText Markup Language(Html) for the visual presentation
-
-## Project Looks
-
-![image](https://github.com/bogdanciui18/projectfinal/assets/138584489/76d721ac-af74-45ba-83e2-734903f00184)
+-Developed a C program to solve the Eight Towers problem.
+-Employed the backtracking algorithm to find every valid solution.
+-Created a Dockerfile to define the environment and build process.
+-Set up a base image (Alpine Linux) . Alpine Linux images are known for being lighter and more resource-efficient compared to other distributions.
+-Built a Docker Image.
+-Ran the Docker Container
+-Rebuilt the Docker Image
+-Pushed to Docker Hub
