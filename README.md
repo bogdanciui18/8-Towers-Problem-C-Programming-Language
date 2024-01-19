@@ -9,10 +9,24 @@ This application solves the Eight Towers Problem, which involves placing 8 tower
 ## Tehnical Details
 
 -Developed a C program to solve the Eight Towers problem.
+
+
 -Employed the backtracking algorithm to find every valid solution.
+
+
 -Created a Dockerfile to define the environment and build process.
+
+
 -Set up a base image (Alpine Linux) . Alpine Linux images are known for being lighter and more resource-efficient compared to other distributions.
+
+
 -Built a Docker Image.
+
+
 -Ran the Docker Container
+
+
 -Rebuilt the Docker Image
+
+
 -Pushed to Docker Hub
